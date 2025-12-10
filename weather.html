@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!-- font awsem icons-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="container_weather">
+
+            <!-- Header -->
+            <div class="header">
+
+                <div class="left-space"></div>
+
+                <div class="info">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="city-name">New York</span>
+                    <span class="day-name">Tuesday</span>
+                    <span class="date-day">12-10-2025</span>
+                </div>
+
+                <div class="right-space">
+                    <div class="search-box">
+                        <input type="search" id="search-input">
+                        <button id="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+               <div class="theme-toggle">
+              <input type="checkbox" id="toggle-checkbox">
+              <label for="toggle-checkbox" class="toggle-label">
+              <span class="sun">☀️</span>
+              <span class="moon">🌙</span>
+             <div class="toggle-ball"></div>
+            </label>
+       </div>
+
+            </div>
+            <!-- End Header -->
+
+            <!-- Today Weather -->
+            <div class="infoOfDay">
+
+                <div class="weather-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                        <g transform="translate(20,10)">
+
+                            <!-- CLOUD 1 (Animated) -->
+                            <g class="am-weather-cloud-1">
+                                <path 
+                                d="M47.7,35.4 c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5
+                                c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7
+                                c0,0.8,0.2,1.6,0.4,2.3c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7
+                                c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z"
+                                fill="#91C0F8" stroke="white" stroke-linejoin="round"
+                                stroke-width="1.2"
+                                transform="translate(-10,-6) scale(0.6)" />
+                            </g>
+
+                            <!-- CLOUD 2 (Static) -->
+                            <g>
+                                <path 
+                                d="M47.7,35.4 c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5
+                                c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7
+                                c0,0.8,0.2,1.6,0.4,2.3c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7
+                                c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z"
+                                fill="#57A0EE" stroke="white" stroke-linejoin="round"
+                                stroke-width="1.2"
+                                transform="translate(-20,-11)" />
+                            </g>
+
+                            <!-- LIGHTNING -->
+                            <g transform="translate(-9,28) scale(1.2)">
+                                <polygon class="am-weather-stroke"
+                                fill="orange" stroke="white" stroke-width="1"
+                                points="14.3,-2.9 20.5,-2.9 16.4,4.3 
+                                20.3,4.3 11.5,14.6 14.9,6.9 11.1,6.9" />
+                            </g>
+
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="weather">
+                    <h1 id="temp">18°</h1>
+                    <h3 class="temp-type"> Stormy</h3>
+                    <h5 class="description-type">with party cloudy</h5>
+
+                    <div class="extra-info">
+                        <div class="humidity">
+                            <div class="flexion">
+                                <i class="fa-solid fa-droplet"></i>
+                             <span id="humidity-value">60%</span>
+                             </div>
+                             <span id="humidity-text">Humidity</span>
+                        </div>
+
+                        <div class="wind">
+                            <div class="flexion">
+                                <i class="fa-solid fa-wind"></i>
+                            <span id="wind-speed">12 km/h</span>
+                            </div>
+                            <span id="wind-text">WindSpeed</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- info of Tomorrow -->
+                  <div class="infoTomorrow">
+
+                    <h2 class="dayName">Tomorrow</h2>
+                 <div class="weather-tomorrow">
+                     <div style="padding: 0;" class="weather-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                        <g transform="translate(20,10)">
+
+                            <!-- CLOUD 1 (Animated) -->
+                            <g class="am-weather-cloud-1">
+                                <path 
+                                d="M47.7,35.4 c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5
+                                c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7
+                                c0,0.8,0.2,1.6,0.4,2.3c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7
+                                c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z"
+                                fill="#91C0F8" stroke="white" stroke-linejoin="round"
+                                stroke-width="1.2"
+                                transform="translate(-10,-6) scale(0.6)" />
+                            </g>
+
+                            <!-- CLOUD 2 (Static) -->
+                            <g>
+                                <path 
+                                d="M47.7,35.4 c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5
+                                c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7
+                                c0,0.8,0.2,1.6,0.4,2.3c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7
+                                c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z"
+                                fill="#57A0EE" stroke="white" stroke-linejoin="round"
+                                stroke-width="1.2"
+                                transform="translate(-20,-11)" />
+                            </g>
+
+                            <!-- LIGHTNING -->
+                            <g transform="translate(-9,28) scale(1.2)">
+                                <polygon class="am-weather-stroke"
+                                fill="orange" stroke="white" stroke-width="1"
+                                points="14.3,-2.9 20.5,-2.9 16.4,4.3 
+                                20.3,4.3 11.5,14.6 14.9,6.9 11.1,6.9" />
+                            </g>
+
+                        </g>
+                    </svg>
+                </div>
+                  <div class="tempireture">
+                    <h1 id="temp">18°</h1>
+                    <h3 class="temp-type"> Stormy</h3>
+                    <h5 class="description-type">with party cloudy</h5>
+                  </div>
+               </div>
+                    
+
+                <div class="extraInfoTomorrow">
+                    <div class="moreInfo">
+                            <div class="humidity">
+                            <div class="flexion">
+                                <i class="fa-solid fa-droplet" style="color: rgb(150, 208, 243);"></i>
+                             <span id="humidity-value">60%</span>
+                             </div>
+                             <span id="humidity-text">Humidity</span>
+                             </div>
+
+                        <div class="windSpeed">
+                            <div class="flexion">
+                                <i class="fa-solid fa-wind"></i>
+                            <span id="wind-speed">12 km/h</span>
+                            </div>
+                            <span id="wind-text">WindSpeed</span>
+                            </div>
+                        </div>
+                        <button class="see-week">See full week</button>
+                    </div>
+                 </div>
+
+                 <!-- end info of Tomorrow -->  
+
+        </div>
+            <!-- End Today Weather -->
+
+        </div> <!-- container_weather -->
+
+        <!-- Week Forecast -->
+        <div class="hourly-container">
+
+    <div class="hour-card active">
+        <p class="time">Now</p>
+        <div class="icon"></div>
+        <p class="temp">10°</p>
+    </div>
+
+    <div class="hour-card">
+        <p class="time">+2h</p>
+       <div class="icon"></div>
+        <p class="temp">13°</p>
+    </div>
+
+    <div class="hour-card">
+        <p class="time">+4h</p>
+        <div class="icon"></div>
+        <p class="temp">15°</p>
+    </div>
+
+    <div class="hour-card">
+        <p class="time">+6h</p>
+        <div class="icon"></div>
+        <p class="temp">14°</p>
+    </div>
+
+    <div class="hour-card">
+        <p class="time">+8h</p>
+        <div class="icon"></div>
+        <p class="temp">16°</p>
+    </div>
+
+    <div class="hour-card">
+        <p class="time">+10h</p>
+        <div class="icon"></div>
+        <p class="temp">15°</p>
+    </div>
+
+    <div class="hour-card">
+        <p class="time">+12h</p>
+        <div class="icon"></div>
+        <p class="temp">13°</p>
+    </div>
+
+    <div class="hour-card">
+        <p class="time">+14h</p>
+        <div class="icon"></div>
+        <p class="temp">11°</p>
+    </div>
+
+</div>
+
+
+    </div> <!-- container -->
+
+    
+</body>
+</html>
+
+

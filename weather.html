@@ -17,30 +17,31 @@
 
 <body>
 
-    <div class="container">
+    <div class="container" style="display: none;">
 
         <div class="container_weather">
 
             <!-- Header -->
             <div class="header">
 
-                <div class="left-space"></div>
+                <!-- <div class="left-space"></div> -->
 
                 <div class="info">
                     <i class="fa-solid fa-location-dot"></i>
                     <span class="city-name">New York</span>
-                    <span class="day-name">Tuesday</span>
-                    <span class="date-day">12-10-2025</span>
+                    <span class="current-date-text"></span>
+                    <!-- <span class="day-name">Tuesday</span>
+                    <span class="date-day">12-10-2025</span> -->
                 </div>
 
-                <div class="right-space">
+                <!-- <div class="right-space"> -->
                     <div class="search-box">
-                        <input type="search" id="search-input">
+                        <input type="search" id="search-input"placeholder="Search city" value="">
                         <button id="search-btn">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
-                </div>
+                <!-- </div> -->
                <div class="theme-toggle">
               <input type="checkbox" id="toggle-checkbox">
               <label for="toggle-checkbox" class="toggle-label">
@@ -57,49 +58,13 @@
             <div class="infoOfDay">
 
                 <div class="weather-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                        <g transform="translate(20,10)">
-
-                            <!-- CLOUD 1 (Animated) -->
-                            <g class="am-weather-cloud-1">
-                                <path 
-                                d="M47.7,35.4 c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5
-                                c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7
-                                c0,0.8,0.2,1.6,0.4,2.3c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7
-                                c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z"
-                                fill="#91C0F8" stroke="white" stroke-linejoin="round"
-                                stroke-width="1.2"
-                                transform="translate(-10,-6) scale(0.6)" />
-                            </g>
-
-                            <!-- CLOUD 2 (Static) -->
-                            <g>
-                                <path 
-                                d="M47.7,35.4 c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5
-                                c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7
-                                c0,0.8,0.2,1.6,0.4,2.3c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7
-                                c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z"
-                                fill="#57A0EE" stroke="white" stroke-linejoin="round"
-                                stroke-width="1.2"
-                                transform="translate(-20,-11)" />
-                            </g>
-
-                            <!-- LIGHTNING -->
-                            <g transform="translate(-9,28) scale(1.2)">
-                                <polygon class="am-weather-stroke"
-                                fill="orange" stroke="white" stroke-width="1"
-                                points="14.3,-2.9 20.5,-2.9 16.4,4.3 
-                                20.3,4.3 11.5,14.6 14.9,6.9 11.1,6.9" />
-                            </g>
-
-                        </g>
-                    </svg>
+                   <img src="img/amcharts_weather_icons_1.0.0/animated/snowy-5.svg" alt="" class="weather-summary-img">
                 </div>
 
                 <div class="weather">
-                    <h1 id="temp">18°</h1>
+                    <h1 id="temp">18 °C</h1>
                     <h3 class="temp-type"> Stormy</h3>
-                    <h5 class="description-type">with party cloudy</h5>
+                    <!-- <h5 class="description-type">with party cloudy</h5> -->
 
                     <div class="extra-info">
                         <div class="humidity">
@@ -122,51 +87,16 @@
                 </div>
 
                  <!-- info of Tomorrow -->
+                  <div class="week-wrapper">
                   <div class="infoTomorrow">
 
                     <h2 class="dayName">Tomorrow</h2>
                  <div class="weather-tomorrow">
                      <div style="padding: 0;" class="weather-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                        <g transform="translate(20,10)">
-
-                            <!-- CLOUD 1 (Animated) -->
-                            <g class="am-weather-cloud-1">
-                                <path 
-                                d="M47.7,35.4 c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5
-                                c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7
-                                c0,0.8,0.2,1.6,0.4,2.3c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7
-                                c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z"
-                                fill="#91C0F8" stroke="white" stroke-linejoin="round"
-                                stroke-width="1.2"
-                                transform="translate(-10,-6) scale(0.6)" />
-                            </g>
-
-                            <!-- CLOUD 2 (Static) -->
-                            <g>
-                                <path 
-                                d="M47.7,35.4 c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5
-                                c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7
-                                c0,0.8,0.2,1.6,0.4,2.3c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7
-                                c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z"
-                                fill="#57A0EE" stroke="white" stroke-linejoin="round"
-                                stroke-width="1.2"
-                                transform="translate(-20,-11)" />
-                            </g>
-
-                            <!-- LIGHTNING -->
-                            <g transform="translate(-9,28) scale(1.2)">
-                                <polygon class="am-weather-stroke"
-                                fill="orange" stroke="white" stroke-width="1"
-                                points="14.3,-2.9 20.5,-2.9 16.4,4.3 
-                                20.3,4.3 11.5,14.6 14.9,6.9 11.1,6.9" />
-                            </g>
-
-                        </g>
-                    </svg>
+                      <img src="img/amcharts_weather_icons_1.0.0/animated/thunder.svg" alt="" class="icons">
                 </div>
                   <div class="tempireture">
-                    <h1 id="temp">18°</h1>
+                    <h1 id="tempTommorow">18°</h1>
                     <h3 class="temp-type"> Stormy</h3>
                     <h5 class="description-type">with party cloudy</h5>
                   </div>
@@ -195,71 +125,193 @@
                     </div>
                  </div>
 
+                 
+                </div>
                  <!-- end info of Tomorrow -->  
 
         </div>
             <!-- End Today Weather -->
 
-        </div> <!-- container_weather -->
-
-        <!-- Week Forecast -->
-        <div class="hourly-container">
+              <div class="hourly-container">
 
     <div class="hour-card active">
         <p class="time">Now</p>
-        <div class="icon"></div>
-        <p class="temp">10°</p>
+        <div class="icon">
+            <img src="img/amcharts_weather_icons_1.0.0/animated/thunder.svg" alt="" class="icons">
+        </div>       
+         <p class="temp">10°</p>
     </div>
 
     <div class="hour-card">
         <p class="time">+2h</p>
-       <div class="icon"></div>
+         <div class="icon">
+            <img src="img/amcharts_weather_icons_1.0.0/animated/thunder.svg" alt="" class="icons">
+        </div>
         <p class="temp">13°</p>
     </div>
 
     <div class="hour-card">
         <p class="time">+4h</p>
-        <div class="icon"></div>
+        <div class="icon">
+            <img src="img/amcharts_weather_icons_1.0.0/animated/thunder.svg" alt="" class="icons">
+        </div>
         <p class="temp">15°</p>
     </div>
 
     <div class="hour-card">
         <p class="time">+6h</p>
-        <div class="icon"></div>
+        <div class="icon">
+            <img src="img/amcharts_weather_icons_1.0.0/animated/thunder.svg" alt="" class="icons">
+        </div>
         <p class="temp">14°</p>
     </div>
 
     <div class="hour-card">
         <p class="time">+8h</p>
-        <div class="icon"></div>
+       <div class="icon">
+            <img src="img/amcharts_weather_icons_1.0.0/animated/thunder.svg" alt="" class="icons">
+        </div>
         <p class="temp">16°</p>
     </div>
 
     <div class="hour-card">
         <p class="time">+10h</p>
-        <div class="icon"></div>
+        <div class="icon">
+            <img src="img/amcharts_weather_icons_1.0.0/animated/thunder.svg" alt="" class="icons">
+        </div>
         <p class="temp">15°</p>
     </div>
 
     <div class="hour-card">
         <p class="time">+12h</p>
-        <div class="icon"></div>
+       <div class="icon">
+            <img src="img/amcharts_weather_icons_1.0.0/animated/thunder.svg" alt="" class="icons">
+        </div>
         <p class="temp">13°</p>
     </div>
 
     <div class="hour-card">
         <p class="time">+14h</p>
-        <div class="icon"></div>
+        <div class="icon">
+            <img src="img/amcharts_weather_icons_1.0.0/animated/thunder.svg" alt="" class="icons">
+        </div>
         <p class="temp">11°</p>
     </div>
 
 </div>
+        </div> <!-- container_weather -->
+
+        <!-- Hourly Forecast -->
+      
 
 
     </div> <!-- container -->
 
-    
+    <section class="search_city section-message">
+    <h1>Discover the weather in every city you go</h1>
+
+    <!-- Search Input with Icon -->
+    <div class="search-box custom-search">
+    <input type="search" id="search-city" placeholder="Search city">
+    <button id="search-btn-city">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    </div>
+    <h4 class="regular-text">
+        Find out the weather conditions of the city
+    </h4>
+    <div class="location-box">
+        <button id="get-location">
+            <svg height="24" width="24" fill="white" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 
+                9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+            </svg>
+            Use location
+        </button>
+    </div>
+</section>
+
+<!-- Not Found Section -->
+<section class="not-found section-message" style="display: none;">
+    <h1>Discover the weather in every city you go</h1>
+  <div class="search-box custom-search">
+    <input type="search" id="search-city-not-found" placeholder="Search city">
+    <button id="search-btn-city-not-found">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    </div>
+    <h4 class="regular-text"> Error City not Found</h4>
+    <div class="location-box">
+        <button id="get-location">
+            <svg height="24" width="24" fill="white" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 
+                9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+            </svg>
+            Use location
+        </button>
+    </div>
+</section>
+
+
+<!-- week section -->
+<!-- WEEK SECTION (hidden by default) -->
+<section id="week-section" class="week-section">
+    <h2 class="title">Weekly Forecast</h2>
+
+    <div class="weekly-container" id="weekly-container">
+
+        <!-- 7 day cards -->
+        <div class="day-card">
+            <p class="day-name">Monday</p>
+            <img src="img/amcharts_weather_icons_1.0.0/animated/day.svg" class="icon">
+            <p class="temp">18° / 10°</p>
+        </div>
+
+        <div class="day-card">
+            <p class="day-name">Tuesday</p>
+            <img src="img/amcharts_weather_icons_1.0.0/animated/cloudy.svg" class="icon">
+            <p class="temp">20° / 11°</p>
+        </div>
+
+        <div class="day-card">
+            <p class="day-name">Wednesday</p>
+            <img src="img/amcharts_weather_icons_1.0.0/animated/rainy-1.svg" class="icon">
+            <p class="temp">21° / 12°</p>
+        </div>
+
+        <div class="day-card">
+            <p class="day-name">Thursday</p>
+            <img src="img/amcharts_weather_icons_1.0.0/animated/thunder.svg" class="icon">
+            <p class="temp">17° / 9°</p>
+        </div>
+
+        <div class="day-card">
+            <p class="day-name">Friday</p>
+            <img src="img/amcharts_weather_icons_1.0.0/animated/snowy-1.svg" class="icon">
+            <p class="temp">13° / 3°</p>
+        </div>
+
+        <div class="day-card">
+            <p class="day-name">Saturday</p>
+            <img src="img/amcharts_weather_icons_1.0.0/animated/day.svg" class="icon">
+            <p class="temp">22° / 15°</p>
+        </div>
+
+        <div class="day-card">
+            <p class="day-name">Sunday</p>
+            <img src="img/amcharts_weather_icons_1.0.0/animated/cloudy.svg" class="icon">
+            <p class="temp">19° / 13°</p>
+        </div>
+
+    </div>
+<div style="display: flex; justify-content: center;align-items: center;">
+    <button id="back-btn" class="back-btn">Back</button>
+
+</div>
+</section>
+<!-- end section week -->
+
+
+    <script src="script2.js" defer></script>
 </body>
 </html>
-
-

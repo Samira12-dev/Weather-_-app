@@ -214,3 +214,4 @@ backBtn.addEventListener("click", () => {
 // INITIAL SETUP
 // ========================
 showSection(searchCitySection);
+
